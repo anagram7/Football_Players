@@ -10,6 +10,13 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Clonable.h" />
+    <ClInclude Include="FootballPlayer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="FootballPlayer.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{FD2B3389-F132-44E3-BB9D-B9BB5978E702}</ProjectGuid>
     <RootNamespace>Football_Players</RootNamespace>
@@ -59,8 +66,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
