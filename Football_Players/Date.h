@@ -3,6 +3,8 @@
 
 // Note: all int arguments must be non-negative.
 
+#include <iostream>
+
 namespace mas {
 
 class Date {

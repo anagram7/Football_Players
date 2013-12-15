@@ -12,10 +12,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Clonable.h" />
+    <ClInclude Include="Date.h" />
     <ClInclude Include="FootballPlayer.h" />
+    <ClInclude Include="StringBasic.h" />
+    <ClInclude Include="UtilityFunctions.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Date.cpp" />
     <ClCompile Include="FootballPlayer.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="StringBasic.cpp" />
+    <ClCompile Include="UtilityFunctions.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{FD2B3389-F132-44E3-BB9D-B9BB5978E702}</ProjectGuid>

@@ -1,5 +1,7 @@
 #include "Clonable.h"
-#include <string>
+#include "Date.h"
+#include "StringBasic.h"
+#include "UtilityFunctions.h"
 #include <iostream>
 
 #pragma once
@@ -7,13 +9,13 @@
 namespace mas
 {
 
-class FootballPlayer :
+class FootballPlayer:
 	public Clonable
 {
 public:
 	enum PositionType {GOALKEEPER, DEFENDER, MIDFIELDER, FORWARD};
 private:
-	std::string name;
+	StringBasic name;
 	Date birthdate;
 	int number;
 	int position;
@@ -22,9 +24,9 @@ private:
 	int rating;
 	bool injured;
 public:
-	FootballPlayer(void);
+	FootballPlayer();
 	FootballPlayer(const std::string& name, const Date& birthdate,
-		int number, PositionType postion, int value);
+		int number, PositionType position, int rating);
 	~FootballPlayer(void);
 
 	virtual Clonable* Clone() const;
@@ -35,7 +37,7 @@ public:
 	virtual void RatingUp(int x);
 	virtual void RatingDown(int x);
 
-	virtual const std::string& Name() const;
+	virtual const StringBasic& Name() const;
 	virtual const Date& Birthdate() const;
 	virtual PositionType Position() const;
 	virtual int Number() const;
@@ -51,7 +53,7 @@ public:
 	friend std::ostream& operator << (std::ostream& output, const FootballPlayer& p);
 
 	virtual void Read(std::istream& input = std::cin);
-	friend std::istream& operator << (std::istream& input, const FootballPlayer& p);
+	friend std::istream& operator >> (std::istream& input, FootballPlayer& p);
 };
 
 }
